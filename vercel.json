@@ -1,6 +1,6 @@
 {
   "buildCommand": "echo 'Ready for deployment'",
-  "framework": "static",
+  "framework": "express",
   "cleanUrls": true,
   "trailingSlash": false,
   "env": {},
