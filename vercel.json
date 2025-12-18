@@ -3,18 +3,14 @@
   "framework": "static",
   "cleanUrls": true,
   "trailingSlash": false,
-  "env": [
-    "CORS_ORIGIN",
-    "NODE_ENV",
-    "VERCEL_URL"
-  ],
+  "env": {},
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "/api/:path*"
     },
     {
-      "source": "/(.*)",
+      "source": "\/(.*)",
       "destination": "/index.html"
     }
   ]
