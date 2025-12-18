@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="旅遊平台 - AI 客服系統，為您規劃完美行程">
+  <meta name="theme-color" content="#FF9F43">
+  <title>旅遊平台 - AI 客服系統</title>
+  
+  <!-- 樣式表 -->
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/components.css">
+  <link rel="stylesheet" href="/styles/glass-morphism.css">
+  <link rel="stylesheet" href="/styles/animations.css">
+  <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+  <!-- 導航列 -->
+  <nav class="navbar glass">
+    <div class="container navbar-content">
+      <div class="logo">✈️ 旅遊平台</div>
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">功能</a></li>
+        <li><a href="#chat" class="nav-link">AI 客服</a></li>
+        <li><a href="#destinations" class="nav-link">景點</a></li>
+        <li><a href="#contact" class="nav-link">聯絡</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero 區域 -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <h1>探索世界的新方式</h1>
+        <p>透過 AI 客服獲得個人化的旅遊規劃與建議</p>
+        <a href="#chat" class="btn btn-primary scale-on-hover">開始對話</a>
+      </div>
+      <div class="hero-image fade-in" style="animation-delay: 0.3s;">
+        <div class="illustration">🌍</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 功能區域 -->
+  <section id="features" class="section features">
+    <div class="container">
+      <h2 class="section-title">我們的服務</h2>
+      <div class="features-grid">
+        <div class="feature-card glass">
+          <div class="icon">🗺️</div>
+          <h3>景點介紹</h3>
+          <p>探索全球精選景點，瞭解當地文化與特色</p>
+        </div>
+        <div class="feature-card glass">
+          <div class="icon">🤖</div>
+          <h3>AI 客服</h3>
+          <p>獲得即時、個人化的旅遊諮詢與行程建議</p>
+        </div>
+        <div class="feature-card glass">
+          <div class="icon">📋</div>
+          <h3>行程規劃</h3>
+          <p>根據需求自動生成最佳旅遊行程安排</p>
+        </div>
+        <div class="feature-card glass">
+          <div class="icon">💰</div>
+          <h3>預算規劃</h3>
+          <p>智能估算旅遊成本，幫您做好準備</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 熱門景點 -->
+  <section id="destinations" class="section destinations">
+    <div class="container">
+      <h2 class="section-title">熱門目的地</h2>
+      <div class="destinations-grid">
+        <div class="destination-card glass">
+          <div class="destination-badge">台灣</div>
+          <div class="destination-icon">🏯</div>
+          <h3>台灣 Taiwan</h3>
+          <p>台北 · 九份 · 阿里山 · 日月潭</p>
+        </div>
+        <div class="destination-card glass">
+          <div class="destination-badge">日本</div>
+          <div class="destination-icon">🗾</div>
+          <h3>日本 Japan</h3>
+          <p>東京 · 京都 · 大阪 · 富士山</p>
+        </div>
+        <div class="destination-card glass">
+          <div class="destination-badge">韓國</div>
+          <div class="destination-icon">🏮</div>
+          <h3>韓國 Korea</h3>
+          <p>首爾 · 釜山 · 濟州島 · 南大門</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI 聊天區域 -->
+  <section id="chat" class="section chat">
+    <div class="container">
+      <h2 class="section-title">AI 旅遊客服</h2>
+      <div class="chat-container glass">
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot-message">
+            <span class="message-avatar">🤖</span>
+            <div class="message-content">
+              <p>歡迎！👋 我是旅遊 AI 助手。您可以詢問我關於景點、行程規劃、預算等任何旅遊相關問題。</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input-area">
+          <form id="chatForm" class="chat-form">
+            <input 
+              type="text" 
+              id="chatInput" 
+              class="chat-input" 
+              placeholder="輸入您的旅遊問題..." 
+              required
+            >
+            <button type="submit" class="btn btn-primary">發送</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡表單 -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title">聯絡我們</h2>
+      <div class="contact-wrapper">
+        <div class="contact-info glass">
+          <h3>聯絡資訊</h3>
+          <p>📧 Email: hello@travelai.com</p>
+          <p>📱 Phone: +886-123-456789</p>
+          <p>🏢 Address: 台北市信義區</p>
+        </div>
+        <form id="contactForm" class="contact-form glass">
+          <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">電子郵件</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">電話號碼</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="message">訊息</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">提交</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁腳 -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 旅遊 AI 平台. 版權所有。</p>
+      <p>由現代化技術驅動的旅遊規劃體驗</p>
+    </div>
+  </footer>
+
+  <!-- 指令碼 -->
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/api.js"></script>
+  <script src="/scripts/chat.js"></script>
+  <script src="/scripts/contact.js"></script>
+  <script src="/scripts/utils.js"></script>
+</body>
+</html>

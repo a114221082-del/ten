@@ -1,0 +1,231 @@
+/* ============================================
+   responsive.css - 響應式設計 (RWD)
+   ============================================ */
+
+/* 平板設備 (768px 以下) */
+@media (max-width: 768px) {
+  :root {
+    --spacing-2xl: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  /* 導航列 */
+  .nav-links {
+    gap: var(--spacing-md);
+    font-size: 0.9rem;
+  }
+
+  /* Hero 區域 */
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .illustration {
+    font-size: 6rem;
+  }
+
+  /* Grid 佈局 */
+  .features-grid,
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* 聯絡區域 */
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* 聊天 */
+  .chat-container {
+    height: 400px;
+  }
+
+  .message-content {
+    max-width: 85%;
+  }
+}
+
+/* 手機設備 (480px 以下) */
+@media (max-width: 480px) {
+  :root {
+    --font-size-base: 14px;
+    --spacing-xl: 1rem;
+    --spacing-lg: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  /* 導航列 */
+  .navbar {
+    padding: var(--spacing-md) 0;
+  }
+
+  .navbar-content {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  /* Hero */
+  .hero {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 0.9rem;
+  }
+
+  /* 特徵卡片 */
+  .feature-card,
+  .destination-card {
+    padding: var(--spacing-md);
+  }
+
+  .feature-card .icon,
+  .destination-card .destination-icon {
+    font-size: 2rem;
+  }
+
+  /* 表單 */
+  .contact-form {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: var(--spacing-md);
+  }
+
+  /* 聊天 */
+  .chat-container {
+    height: 300px;
+  }
+
+  .chat-form {
+    flex-direction: column;
+  }
+
+  .chat-input,
+  .btn {
+    width: 100%;
+  }
+
+  .message-content {
+    max-width: 95%;
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+
+  /* 頁腳 */
+  .footer {
+    padding: var(--spacing-lg) 0;
+  }
+}
+
+/* 列表方向 */
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 列印樣式 */
+@media print {
+  body {
+    background: var(--white);
+  }
+
+  .navbar,
+  .chat,
+  .footer {
+    display: none;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* 深色模式 (可選) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark: #F5F6FA;
+    --white: #2D3436;
+    --light: #2D3436;
+  }
+
+  body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+}
+
+/* 高對比度模式 */
+@media (prefers-contrast: more) {
+  .glass {
+    border-width: 2px;
+    border-color: var(--primary);
+  }
+
+  .btn-primary {
+    border: 2px solid var(--primary-dark);
+  }
+}
+
+/* 減少動畫 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
